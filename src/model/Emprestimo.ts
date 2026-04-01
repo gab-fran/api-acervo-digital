@@ -119,7 +119,8 @@ class Emprestimo {
                 titulo: linha.titulo,
                 autor: linha.autor,
                 editora: linha.editora,
-                isbn: linha.isbn
+                isbn: linha.isbn, 
+                valor_aquisicao: linha.valor_aquisicao
             }
         };
     }
@@ -149,7 +150,7 @@ class Emprestimo {
                 SELECT e.id_emprestimo, e.id_aluno, e.id_livro,
                        e.data_emprestimo, e.data_devolucao, e.status_emprestimo, e.status_emprestimo_registro,
                        a.ra, a.nome, a.sobrenome, a.celular, a.email,
-                       l.titulo, l.autor, l.editora, l.isbn
+                           l.titulo, l.autor, l.editora, l.isbn, l.valor_aquisicao
                 FROM Emprestimo e
                 JOIN Aluno a ON e.id_aluno = a.id_aluno
                 JOIN Livro l ON e.id_livro = l.id_livro
@@ -190,7 +191,7 @@ class Emprestimo {
                 SELECT e.id_emprestimo, e.id_aluno, e.id_livro,
                        e.data_emprestimo, e.data_devolucao, e.status_emprestimo, e.status_emprestimo_registro,
                        a.ra, a.nome, a.sobrenome, a.celular, a.email,
-                       l.titulo, l.autor, l.editora, l.isbn
+                           l.titulo, l.autor, l.editora, l.isbn, l.valor_aquisicao
                 FROM Emprestimo e
                 JOIN Aluno a ON e.id_aluno = a.id_aluno
                 JOIN Livro l ON e.id_livro = l.id_livro
