@@ -14,6 +14,9 @@ DROP TABLE IF EXISTS Livro;
 -- Drop da tabela Aluno
 DROP TABLE IF EXISTS Aluno;
 
+-- Drop da tabela Usuario
+DROP TABLE IF EXISTS Usuario CASCADE;
+
 -- Drop da sequência
 DROP SEQUENCE IF EXISTS seq_ra;
 
